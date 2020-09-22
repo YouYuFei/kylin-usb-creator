@@ -28,7 +28,6 @@ StyleComboBox::StyleComboBox(StyleWidgetAttribute scb_swa )
 
     QFont ft;
     ft.setPixelSize(14);
-    ft.setFamily(QFontDatabase::applicationFontFamilies(QFontDatabase::addApplicationFont(":/data/PingFang-Jian-ChangGuiTi-2.ttf")).at(0));//读取字体
     listWidget->setFont(ft);
     ft.setPixelSize(12);
     text->setFont(ft);

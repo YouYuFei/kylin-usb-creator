@@ -21,8 +21,6 @@
 #include <QBoxLayout>
 //打开文件
 #include <QFileDialog>
-//读取本地字体
-#include <QFontDatabase>
 //硬盘信息
 #include <QStorageInfo>
 
@@ -44,7 +42,6 @@ public slots:
 private:
     bool event(QEvent *event);
     void creatStartSlots();//开始制作
-    void paintEvent(QPaintEvent *event);//重绘窗口
     void initControlQss();//初始化控件及其样式
     void getStorageInfo();//获取磁盘信息
     void dialogInitControlQss(StyleWidgetAttribute page_swa);//初始化对话框控件及其样式

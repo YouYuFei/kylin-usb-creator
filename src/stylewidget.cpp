@@ -125,7 +125,6 @@ void StyleWidget::myStyle(StyleWidgetAttribute swa)
         icon->hide();
         title->setStyleSheet("StyleWidget #title{background-color:rgba(255,255,255,1);border-top-left-radius:"
                              +QString::number(swa.radius)+"px;border-top-right-radius:"+QString::number(swa.radius)+"px;}");
-        qDebug()<<"hide maxmium btn & minium btn";
         widgetClose->hide();//初版在dialog中先暂时隐藏最小化和最大化按钮
         widgetMin->hide();
 
@@ -145,10 +144,6 @@ void StyleWidget::paintEvent(QPaintEvent *event)//重绘窗口
     //设置字体字号
     QFont ft;
     ft.setPixelSize(14);
-    if(m_isDialog)
-        ft.setFamily(QFontDatabase::applicationFontFamilies(QFontDatabase::addApplicationFont(":/data/PingFang-SC-Semibold-2.ttf")).at(0));//读取字体
-    else
-        ft.setFamily(QFontDatabase::applicationFontFamilies(QFontDatabase::addApplicationFont(":/data/PingFang-Jian-ChangGuiTi-2.ttf")).at(0));//读取字体
     text->setFont(ft);
     paintOnce=true;
 }

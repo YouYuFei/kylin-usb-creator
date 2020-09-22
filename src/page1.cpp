@@ -182,22 +182,6 @@ void Page1::dialogInitControlQss(StyleWidgetAttribute page_swa)
                                "StyleWidget #dialogYes:pressed{background-color:rgba(82,87,217,1);border-radius:4px;color:#fff;}");
 }
 
-void Page1::paintEvent(QPaintEvent *event)
-{
-    if(paintOnce)return;
-    //设置字体字号
-    QFont ftN,ftM;
-    ftN.setFamily(QFontDatabase::applicationFontFamilies(QFontDatabase::addApplicationFont(":/data/PingFang-Jian-ChangGuiTi-2.ttf")).at(0));//读取字体
-    ftM.setFamily(QFontDatabase::applicationFontFamilies(QFontDatabase::addApplicationFont(":/data/PingFang-SC-Semibold-2.ttf")).at(0));//读取字体
-    tabIso->setFont(ftN);
-    tabUdisk->setFont(ftN);
-    urlIso->setFont(ftM);
-    findIso->setFont(ftM);
-    warnningText->setFont(ftN);
-    creatStart->setFont(ftM);
-    paintOnce=true;
-}
-
 void Page1::getStorageInfo()//获取磁盘信息
 {
     QList<QStorageInfo> diskList = QStorageInfo::mountedVolumes();//获取磁盘列表

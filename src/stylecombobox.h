@@ -8,8 +8,6 @@
 #include <QListWidget>
 #include <QBoxLayout>
 #include <QLabel>
-//读取本地字体
-#include <QFontDatabase>
 
 class StyleComboBox : public QWidget
 {

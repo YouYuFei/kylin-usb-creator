@@ -13,8 +13,6 @@
 #include <QPushButton>
 //布局
 #include <QBoxLayout>
-//读取本地字体
-#include <QFontDatabase>
 //鼠标拖动事件
 #include <QMouseEvent>
 #include <QPoint>
